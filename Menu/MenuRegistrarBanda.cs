@@ -39,7 +39,7 @@ namespace ScreenSound.Menu
                 return false;
             }
 
-            var client = new OpenAIAPI("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");
+            var client = new OpenAIAPI("");
             var chat = client.Chat.CreateConversation();
             chat.AppendSystemMessage($"Resuma a banda {nomeBanda} em 1 parágrafo. Adote uma linguagem informal.");
             var resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();

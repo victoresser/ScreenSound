@@ -34,7 +34,7 @@ internal class MenuRegistrarMusica : Menu
         }
         
         Console.WriteLine("Esta banda não existe no nosso banco de dados, mas não se preocupe,\nVamos criar esta banda e inserí-la no banco de dados.");
-        var client = new OpenAIAPI("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");
+        var client = new OpenAIAPI("");
         var chat = client.Chat.CreateConversation();
         chat.AppendSystemMessage($"Resuma a banda {nome} em 1 parágrafo. Adote uma linguagem informal.");
         var resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
